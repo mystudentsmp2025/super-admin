@@ -2,6 +2,9 @@
   command = "chmod +x netlify_build.sh && ./netlify_build.sh"
   publish = "build/web"
 
+[build.environment]
+  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL,SUPABASE_ANON_KEY"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
